@@ -2,7 +2,7 @@ package Scanner;
 
 import java.util.Scanner;
 
-class PrintingFirstWord {
+public class PrintingFirstWord {
     public static void main(String[] args) {
         Scanner myScanner = new Scanner(System.in);
         String myText = myScanner.next();
