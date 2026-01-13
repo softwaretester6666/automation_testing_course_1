@@ -16,7 +16,7 @@ class Survey {
         scan.nextLine();
         System.out.println("Input your favorite movie:");
         String movie = scan.nextLine();
-        System.out.println("Do you like Java?");
+        System.out.println("Do you like Java? (true/false)");
         boolean userLikeJava = scan.nextBoolean();
         scan.nextLine();
         System.out.println("Input the reason:");
