@@ -13,16 +13,14 @@ public final class Console {
     // "прячем" конструктор чтобы никто не создал экземпляр
     private Console() {}
 
+    // предоставляем только методы nextLine и nextInt (никакие другие недоступны)
     public static String nextLine() {
-        // предоставляем только метод nextLine (никакие другие недоступны)
         return SC.nextLine();
     }
 
     public static int nextInt() {
-        // предоставляем только метод nextInt (никакие другие недоступны)
         int res = SC.nextInt();
-        // "съедаем" остаточный символ \n в буфере
-        SC.nextLine();
+        SC.nextLine();                                             // "съедаем" остаточный символ \n в буфере
         return res;
     }
 }
