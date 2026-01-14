@@ -20,7 +20,7 @@ public final class Console {
 
     public static int nextInt() {
         int res = SC.nextInt();
-        SC.nextLine();                                             // "съедаем" остаточный символ \n в буфере
+        SC.nextLine();                                            // "съедаем" остаточный символ \n в буфере
         return res;
     }
 }
