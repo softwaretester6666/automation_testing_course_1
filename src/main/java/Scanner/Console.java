@@ -34,7 +34,6 @@ class Main {
         int id = Console.nextInt();
         System.out.println("Введите имя:");
         String name = Console.nextLine();
-
         System.out.println("Имя (" + name + ") и ID ("
                 + id + ") сотрудника успешно внесены в БД");
 
