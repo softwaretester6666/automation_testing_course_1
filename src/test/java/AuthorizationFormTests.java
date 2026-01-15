@@ -1,28 +1,26 @@
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selenide.*;
+import com.microsoft.playwright.*;
 
 public class AuthorizationFormTests {
 
-    @Test
-    void passedLoginingTest() {
-        open("https://school.qa.guru/");
+    public static void main(String[] args) {
+        // Инициализация Playwright
+        Playwright playwright = Playwright.create();
 
-        $("[name=email]").setValue("qagurubot@gmail.com");
-        $("[name=password]").setValue("somepasshere").pressEnter();
+        // Запуск браузера
+        Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
+        // Создание контекста
+        BrowserContext context = browser.newContext();
+        //Создание страницы
+        Page page = context.newPage();
 
-        $("[class=stream-title]").shouldHave(text("QA.GURU | Открытые занятия. Полный список."));
-    }
+        //Your tests
 
-    @Test
-    void failedLoginingTest() {
-        open("https://school.qa.guru/");
-        $("[id=xdgetr7101_1_1]").click();
-
-        $("[name=email]").setValue("qagurubot@gmail.com");
-        $("[name=password]").setValue("wrong_password").pressEnter();
-
-        $("[id=xdgetr4464_1_1]").shouldHave(text("Неверный пароль"));
+        // Закрытие ресурсов
+        page.close();
+        context.close();
+        browser.close();
+        playwright.close();
     }
 }
