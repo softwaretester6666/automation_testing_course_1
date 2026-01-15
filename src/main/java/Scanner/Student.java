@@ -4,30 +4,30 @@ import java.util.Scanner;
 public class Student {
     // создаем инкапсулированные поля класса
     private int id;
-    private String full_name;
+    private String fullName;
     private int age;
     private String faculty;
-    private double average_grade;
-    private String phone_number;
+    private double averageGrade;
+    private String phoneNumber;
 
 
     // создаем перегруженные конструкторы-сеттеры
     public Student(int id, String name, int age, String faculty, double avgGrade, String phone) {
         this.id = id;
-        full_name = name;
+        fullName = name;
         this.age = age;
         this.faculty = faculty;
-        average_grade = avgGrade;
-        phone_number = phone;
+        averageGrade = avgGrade;
+        phoneNumber = phone;
     }
 
     public Student(int id, String name, int age, String faculty) {
         this.id = id;
-        full_name = name;
+        fullName = name;
         this.age = age;
         this.faculty = faculty;
-        average_grade = 0.0;
-        phone_number = "неизвестен";
+        averageGrade = 0.0;
+        phoneNumber = "неизвестен";
     }
 
     // создаем методы-геттеры
@@ -36,7 +36,7 @@ public class Student {
     }
 
     public String getFullName() {
-        return full_name;
+        return fullName;
     }
 
     public int getAge() {
@@ -48,22 +48,22 @@ public class Student {
     }
 
     public double getAverageGrade() {
-        return average_grade;
+        return averageGrade;
     }
 
     public String getPhoneNumber() {
-        return phone_number;
+        return phoneNumber;
     }
 
     // создаем метод печати информации
     public void printInfo() {
         System.out.println("Информация о студенте #" + id);
         System.out.println("ID: " + id);
-        System.out.println("ФИО: " + full_name);
+        System.out.println("ФИО: " + fullName);
         System.out.println("Возраст (лет): " + age);
         System.out.println("Факультет: " + faculty);
-        System.out.println("Средний балл (GPA): " + average_grade);
-        System.out.println("Телефон: " + phone_number);
+        System.out.println("Средний балл (GPA): " + averageGrade);
+        System.out.println("Телефон: " + phoneNumber);
         System.out.println("=====");
 
     }
