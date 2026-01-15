@@ -71,7 +71,7 @@ public class Student {
 }
 
 
-class Main {
+class Test {
     public static void main(String[] args) {
 
         // создаем объект класса Scanner

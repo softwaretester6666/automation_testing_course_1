@@ -19,7 +19,7 @@ public final class Console {
     }
 }
 
-class Main {
+class Print {
     public static void main(String[] args) {
         // Console console = new Console();
         // не можем создать объект, т.к. конструктор скрыт
